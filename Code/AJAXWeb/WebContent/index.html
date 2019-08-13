@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script> 
+function loadDoc()
+{
+	alert("d");
+
+	XMLHttpRequest httpRequest = new XMLHttpRequest();
+	
+	httpRequest.onreadystatechange=function(){
+//	if(this.status==200)
+	//	{
+			document.getElementById("dynaText").innerHTML="Updated Text";
+		//}
+	};
+	httpRequest.open("GET","New Text" true);
+	httpRequest.send();
+	
+}
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+
+<button type="button" onClick="loadDoc()">Change Content</button> 
+<div id="dynaText"> Hello Rajesh</div>
+</body>
+</html>
